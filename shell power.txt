@@ -1,0 +1,37 @@
+read -p 'enter the number' n
+if [ $((n%2)) -eq 0 ]
+then
+   echo 'the number is even.'
+else 
+   echo'the number is odd.'
+fi    
+####Fibonacci series
+echo 'enter the number of terms the Fibonacci series'
+read numTerms
+term1=0
+term2=1
+echo  -n '$term1 $term2'
+
+counter=3
+
+while [ $counter -le $numTerms ]; do
+     nextTerm=$((term1 + term2))
+     echo -n '$nextTerm'
+     term1=$term2
+     term2=$nextTerm
+     counter=$((counter + 1))
+done
+
+echo
+ STRING
+echo 'enter first string'
+read s1
+echo 'enter second string'
+read s2
+if [ $s1=$s2 ]
+then
+echo 'string are equal'
+else
+echo 'string are not equal'
+fi
+
